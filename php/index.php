@@ -1,7 +1,7 @@
 <?php 
-include_once ('./includes/header.php')
-
+include ('includes/header.php');
 ?>
-<body>
+
     
 </body>
+

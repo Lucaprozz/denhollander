@@ -1,4 +1,29 @@
+@import '../styles/index.scss';
+
 *{
     margin: 0;
     padding: 0;
 }
+
+.header {
+    width: 100%;
+    background-color: $orange;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    &__list {
+       font-size: 20px;
+       list-style-type: none;
+    }
+    &__link {
+        text-decoration: none;
+        color: $black;
+    }
+    &__link:hover {
+        color: $white;
+    }
+}
+
