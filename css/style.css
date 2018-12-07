@@ -120,13 +120,10 @@
       margin: 0 0 10px;
       font-size: 18px; } }
 
-.backgroundcolor {
-  background: #dddbd9; }
-
 .skill {
-  padding: 50px 0;
+  margin: 110px 0;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   width: 100%; }
   .skill__left {
     width: 40%; }

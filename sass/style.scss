@@ -162,14 +162,12 @@
 
 // slider end
 
-.backgroundcolor {
-    background: #dddbd9;
-}
+
 
 .skill {
-    padding: 50px 0;
+    margin: 110px 0;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     width: 100%;
     &__left {
       width: 40%;
@@ -248,6 +246,7 @@
         color: $white;
     }
 }
+
 
 .section {
     width: 100%;
