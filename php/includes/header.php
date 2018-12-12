@@ -27,31 +27,29 @@
 				<li class="navigation__list"><a href="contact" class="navigation__link">Contact</a></li>
 			</ul>
 		</nav> -->
-		<nav class="menu">
-	<ul class="active">
-		<li ><a href="#">Home</a></li>
-		<li><a href="#">My Work</a></li>
-		<li><a href="#">About Me</a></li>
-		<li><a href="#">Get in Touch</a></li>
-		<li><a href="#">Blog</a></li>
+		<nav class="nav">
+	<ul class="active navigation">
+		<li class="navigation__list"><a href="index" class="navigation__link">Home</a></li>
+		<li class="navigation__list"><a href="diensten" class="navigation__link">Diensten</a></li>
+		<li class="navigation__list"><a href="klanten" class="navigation__link">Klanten</a></li>
+		<li class="navigation__list"><a href="projecten" class="navigation__link">Projecten</a></li>
+		<li class="navigation__list"><a href="offerte" class="navigation__link">Offerte</a></li>
+		<li class="navigation__list"><a href="contact" class="navigation__link">Contact</a></li>
 	</ul>
-	
 	<center>
 	<a class="toggle-nav" href="#"><span class="span__icon"><i class="fas fa-bars toggle-password"></i></span></a>
 </center>
 </nav>
 	</header>
 
+
 	<script>
 jQuery(document).ready(function() {
     $(".toggle-password").click(function() {
     $(this).toggleClass("fas fa-bars fas fa-times");
 })
-	jQuery('.toggle-nav').click(function(e) {
-		jQuery(this).toggleClass('active');
-		jQuery('.menu ul').toggleClass('active');
-
-		e.preventDefault();
+	jQuery('.toggle-nav').click(function() {
+		jQuery('.nav ul').toggleClass('active');;
 	});
 });
 </script>

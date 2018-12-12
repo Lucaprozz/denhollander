@@ -207,50 +207,19 @@
 .toggle-nav {
   display: none; }
 
-/*----- Menu -----*/
-.menu {
-  width: 100%;
-  background: #303030; }
-
-.menu ul {
-  display: inline-block; }
-
-.menu li {
-  margin: 0px 50px 0px 0px;
-  float: left;
-  list-style: none;
-  font-size: 17px; }
-
-.menu li:last-child {
-  margin-right: 0px; }
-
-.menu a {
-  text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.5);
-  color: #777;
-  transition: color linear 0.15s; }
-
-.menu a:hover, .menu .current-item a {
-  text-decoration: none;
-  color: white; }
-
 /*----- Responsive -----*/
-@media screen and (max-width: 1150px) {
-  .wrap {
-    width: 90%; } }
-@media screen and (max-width: 970px) {
-  .search-form input {
-    width: 120px; } }
 @media (max-width: 640px) {
-  .menu {
+  .nav ul.active {
+    display: none; }
+
+  .nav {
     position: relative;
     display: inline-block;
     z-index: 10;
     width: 100%; }
 
-  .menu ul.active {
-    display: none; }
-
-  .menu ul {
+  .navigation {
+    display: inline-block;
     width: 100%;
     position: absolute;
     top: 100%;
@@ -258,14 +227,16 @@
     border-radius: 3px;
     background: #303030; }
 
-  .menu li {
+  .nav li {
+    padding: 0;
     margin: 5px 0px 5px 0px;
     float: none;
     display: block; }
 
-  .menu a {
+  .nav a {
     text-align: center;
-    display: block; }
+    display: block;
+    text-decoration: none; }
 
   .span__icon {
     font-size: 30px;

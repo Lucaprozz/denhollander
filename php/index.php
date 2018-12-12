@@ -161,11 +161,21 @@ setInterval(function() {
 
 
 <!-- <script>
+
+
     
 $(".toggle-password").click(function() {
 $(this).toggleClass("fas fa-bars fas fa-times");
 });
 </script> -->
+
+<ul>
+  <li>Milk</li>
+  <li>Bread</li>
+  <li class="fade">Chips</li>
+  <li class="fade">Socks</li>
+</ul>
+
 
 
 
