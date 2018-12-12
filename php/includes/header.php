@@ -7,7 +7,8 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
 	 crossorigin="anonymous">
-	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/style.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<title>Document</title>
 </head>
 
@@ -16,7 +17,7 @@
 		<center>
 			<a href="index"><img class="header__image" src="../images/denhollander.png" /></a>
 		</center>
-		<nav class="nav">
+		<!-- <nav class="nav">
 			<ul class="navigation">
 				<li class="navigation__list"><a href="index" class="navigation__link">Home</a></li>
 				<li class="navigation__list"><a href="diensten" class="navigation__link">Diensten</a></li>
@@ -25,5 +26,32 @@
 				<li class="navigation__list"><a href="offerte" class="navigation__link">Offerte</a></li>
 				<li class="navigation__list"><a href="contact" class="navigation__link">Contact</a></li>
 			</ul>
-		</nav>
+		</nav> -->
+		<nav class="menu">
+	<ul class="active">
+		<li ><a href="#">Home</a></li>
+		<li><a href="#">My Work</a></li>
+		<li><a href="#">About Me</a></li>
+		<li><a href="#">Get in Touch</a></li>
+		<li><a href="#">Blog</a></li>
+	</ul>
+	
+	<center>
+	<a class="toggle-nav" href="#"><span class="span__icon"><i class="fas fa-bars toggle-password"></i></span></a>
+</center>
+</nav>
 	</header>
+
+	<script>
+jQuery(document).ready(function() {
+    $(".toggle-password").click(function() {
+    $(this).toggleClass("fas fa-bars fas fa-times");
+})
+	jQuery('.toggle-nav').click(function(e) {
+		jQuery(this).toggleClass('active');
+		jQuery('.menu ul').toggleClass('active');
+
+		e.preventDefault();
+	});
+});
+</script>

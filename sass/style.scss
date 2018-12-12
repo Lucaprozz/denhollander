@@ -8,10 +8,14 @@
 //header
 
 .header {
+    background-color: $white;
     width: 100%;
     &__image {
         margin-left: auto;
         margin-right: auto;
+        @include for-phablet {
+            width: 45%;
+        }
     }
 }
 
@@ -47,134 +51,72 @@
 
 //slider
 
-.container {
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    height: 70vh;
-}
-
-.slider {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 500%;
-    height: 100%;
-    float: left;
-    animation: animate 30s linear infinite;
-    &__slide {
-        position: relative;
-        width: 20%;
-        height: 100%;
-        float: left;
+.slider { 
+    position: relative; 
+    width: 100%; 
+    height: 600px;
+    @include for-phone {
+        height: 200px;
     }
-    &__caption {
-        position: absolute;
-        bottom: 20px;
-        margin-left: auto;
-        margin-right: auto;
-        left: 0;
-        right: 0;
-        width: 60%;
-        padding: 30px;
-        background: rgba(0,0,0,.5);
-        box-sizing: border-box;
-        transition: 0.5s;
+    @include for-tablet {
+        height: 400px;
+    }
+    &__slide{ 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    bottom: 0;
     }
     &__title {
-        text-align: center;
-        margin: 0 0 20px;
-        padding: 0;
-        color: $white;
-        font-size: 28px;
-        transition: 0.5s;
+    color: $white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%)
     }
-    &__one {
-        background: url('../images/slider__one.jpg');
-        background-size: cover;
-        background-position: center;
+    &__een {
+    background: linear-gradient(
+        rgba(42, 42, 43, 0.50), 
+        rgba(42, 42, 43, 0.50)
+      ), url('../images/slider__one.jpg');
+    background-size: cover;
+    background-position: center;
     }
-    &__two {
-        background: url('../images/slider__two.jpg');
-        background-size: cover;
-        background-position: center;
+    &__twee {
+    background: linear-gradient(
+        rgba(42, 42, 43, 0.50), 
+        rgba(42, 42, 43, 0.50)
+      ), url('../images/slider__two.jpg');
+    background-size: cover;
+    background-position: center;
     }
-    &__three {
-        background: url('../images/slider__three.jpg');
-        background-size: cover;
-        background-position: center;
-    }
-    &__four {
-        background: url('../images/slider__four.jpg');
-        background-size: cover;
-        background-position: center;
-    }
-    @keyframes animate {
-        0% {
-            left: 0;
-        }
-        20% {
-            left: 0;
-        }
-        25% {
-            left: -100%;
-        }
-        45% {
-            left: -100%;
-        }
-        50% {
-            left: -200%;
-        }
-        70% {
-            left: -200%;
-        }
-        75% {
-            left: -300%;
-        }
-        95% {
-            left: -300%;
-        }
-        100% {
-            left: -400%;
-        }
-    }
-    @media (max-width: 768px) {
-        .container {
-            position: relative;
-            overflow: hidden;
-            width: 100%;
-            height: 50vh;
-        }
-        &__caption {
-            position: absolute;
-            bottom: 20px;
-            left: 20px;
-            right: 20px;
-            padding: 20px;
-            width: 55%;
-        }
-        &__title {
-            margin: 0 0 10px;
-            font-size: 18px;
-        }
+    &__drie {
+    background: linear-gradient(
+        rgba(42, 42, 43, 0.50), 
+        rgba(42, 42, 43, 0.50)
+      ), url('../images/slider__three.jpg');
+    background-size: cover;
+    background-position: center;
     }
 }
 
 // slider end
+.drome {
+    margin: auto 0;
+    border: 0.5px solid $orange3;
+    height: 150px;
+}
 
-
-
+.backgroundcolor {
+    background-color: $light-gray2;
+}
 .skill {
-    margin: 110px 0;
+    margin: 0px auto;
     display: flex;
-    justify-content: center;
-    width: 100%;
-    &__left {
-      width: 40%;
-    }
-    &__right {
-      width: 40%;
-    }
+    max-width: 1000px;
+    padding: 110px 0;
     &__title {
         margin-left: 5px;
         font-size: 30px;
@@ -184,7 +126,6 @@
     }
     &__icon {
         font-size: 50px;
-        margin: auto 0 auto 20px;
         color: $orange3;
     }
     &__para {
@@ -199,7 +140,7 @@
         border-radius: 5px;
         font-size: 15px;
         border: none;
-        background: $orange3;;
+        background: $orange3;
         outline: none;
         margin-left: 95px;
         cursor: pointer;
@@ -212,7 +153,7 @@
         border-radius: 5px;
         font-size: 15px;
         border: none;
-        background: $orange3;;
+        background: $orange3;
         outline: none;
         margin-left: 101px;
     }
@@ -223,7 +164,7 @@
         border-radius: 5px;
         font-size: 15px;
         border: none;
-        background: $orange3;;
+        background: $orange3;
         outline: none;
         margin-left: 88px;
     } 
@@ -234,7 +175,7 @@
         border-radius: 5px;
         font-size: 15px;
         border: none;
-        background: $orange3;;
+        background: $orange3;
         outline: none;
         margin-left: 94px;
     }
@@ -275,6 +216,154 @@
         padding-bottom: 35px;
         color: $white;
         width: 40%;
+    }
+}
+
+
+// .tyfus {
+//     display: none;
+// }
+
+
+.test {
+    color: $orange3;
+    font-size: 50px;
+}  
+
+#wrapper {
+    display: flex;
+    max-width: 1000px;
+    margin: 10px auto;
+  }
+  #first {
+      padding-top: 50px;
+      height: 200px;
+      width: 500px;
+  }
+  #second {
+      padding-top: 50px;
+
+      height: 200px;
+      width: 500px;
+  }
+  
+  .drolletje {
+      text-align: justify;
+      margin: 0 auto;
+      width: 250px;
+  }
+
+  .droll {
+      color: $orange3;
+      margin: 0 auto;
+      width: 250px;
+      font-size: 33px;
+  }
+
+//   .testtt {
+//       width: 450px;
+//   }
+
+ .skill__droll {
+     padding: 30px 0;
+     margin: 0 auto;     
+     display: block;
+     width: 250px;
+     font-size: 50px;
+     color: $orange3; 
+    }
+
+    
+ /*----- Toggle Button -----*/
+.toggle-nav {
+	display:none;
+}
+
+/*----- Menu -----*/
+	.menu {
+	width:100%;
+	background:#303030;
+	}
+
+
+.menu ul {
+	display:inline-block;
+}
+
+.menu li {
+	margin:0px 50px 0px 0px;
+	float:left;
+	list-style:none;
+	font-size:17px;
+}
+
+.menu li:last-child {
+	margin-right:0px;
+}
+
+.menu a {
+	text-shadow:0px 1px 0px rgba(0,0,0,0.5);
+	color:#777;
+	transition:color linear 0.15s;
+}
+
+.menu a:hover, .menu .current-item a {
+	text-decoration:none;
+	color: white;
+}
+
+/*----- Responsive -----*/
+@media screen and (max-width: 1150px) {
+	.wrap {
+		width:90%;
+	}
+}
+
+@media screen and (max-width: 970px) {
+	.search-form input {
+		width:120px;
+	}
+}
+
+@include for-phone {
+	.menu {
+		position:relative;
+        display:inline-block;
+        z-index: 10;
+        width: 100%;
+	}
+
+	.menu ul.active {
+		display:none;
+	}
+
+	.menu ul {
+		width:100%;
+		position:absolute;
+		top: 100%;
+		box-shadow:0px 1px 1px rgba(0,0,0,0.15);
+		border-radius:3px;
+		background:#303030;
+	}
+
+
+	.menu li {
+		margin:5px 0px 5px 0px;
+		float:none;
+		display:block;
+	}
+
+	.menu a {
+        text-align: center;
+		display:block;
+	}
+
+    .span__icon {
+        font-size: 30px;
+        color: $black;
+    }
+    .toggle-nav {
+        background-color: $orange3;
     }
 }
 

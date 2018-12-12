@@ -2,41 +2,31 @@
 include ('includes/header.php');
 ?>
 
-<div class="container">
-    <div class="slider">
-        <div class="slider__slide slider__one">
-            <div class="slider__caption">
-                <h2 class="slider__title">ZORGELOOS ONDERHOUD BEGINT BIJ DENHOLLLANDER</h2>
-            </div>
-        </div>
-        <div class="slider__slide slider__two">
-            <div class="slider__caption">
-                <h2 class="slider__title">DENHOLLANDER STAAT VOOR KWALITEIT</h2>
-            </div>
-        </div>
-        <div class="slider__slide slider__three">
-            <div class="slider__caption">
-                <h2 class="slider__title">Slide 3</h2>
-            </div>
-        </div>
-        <div class="slider__slide slider__four">
-            <div class="slider__caption">
-                <h2 class="slider__title">Slide 4</h2>
-            </div>
-        </div>
-        <div class="slider__slide slider__one">
-            <div class="slider__caption">
-                <h2 class="slider__title">Slide 1</h2>
-                <p class="slider__para">Lorem Ipsum is slechts een proeftekst uit het drukkerij- en zetterijwezen.
-                    Lorem Ipsum is de
-                    standaard proeftekst in deze bedrijfstak sinds de 16e eeuw, toen een onbekende drukker een zethaak
-                    met letters nam en ze door elkaar husselde om een font-catalogus te maken. Het heeft niet alleen
-                    vijf eeuwen overleefd maar is ook, vrijwel onveranderd, overgenomen in elektronische letterzetting.
-                </p>
-            </div>
-        </div>
-    </div>
+<div class="slider">
+   <div class="slider__slide slider__een">
+     <h2 class="slider__title">ZORGELOOS ONDERHOUD BEGINT BIJ DENHOLLLANDER</h2>
+   </div>
+   <div class="slider__slide  slider__twee">
+     <h2 class="slider__title">DENHOLLANDER STAAT VOOR KWALITEIT</h2>
+   </div>
+   <div class="slider__slide  slider__drie">     
+    <h2 class="slider__title">Hoeren test teringzooi</h2>
+   </div>
 </div>
+
+<script>
+$(".slider > div:gt(0)").hide();
+
+setInterval(function() { 
+  $('.slider > div:first')
+    .fadeOut(3500)
+    .next()
+    .fadeIn(3500)
+    .end()
+    .appendTo('.slider');
+},  5500);
+</script>
+
 
 <div class="backgroundcolor">
     <div class="skill">
@@ -60,7 +50,7 @@ include ('includes/header.php');
             <a class="skill__link" href="diensten"><button class="skill__button">Lees Meer</button></a>
 
         </div>
-
+        <hr class="drome"/>
         <div class="skill__right">
             <h2 class="skill__title">Bouwkundig Onderhoud</h2>
             <div class="skill__flex">
@@ -80,6 +70,7 @@ include ('includes/header.php');
             </div>
             <a class="skill__link" href="diensten"><button class="skill__button--onderhoud">Lees Meer</button></a>
         </div>
+       
     </div>
 </div>
 
@@ -127,7 +118,7 @@ include ('includes/header.php');
     </div>
 </div>
 
-<section class="section">
+<!-- <section class="section">
     <div class="section__image">
         <div class="section__center">
             <h2 class="section__title">Hoe kunnen we u helpen?</h1>
@@ -139,4 +130,42 @@ include ('includes/header.php');
                 <button class="section__button">Neem Contact op</button>
         </div>
     </div>
-</section>
+</section> -->
+
+
+
+<!-- // <div id="wrapper">
+//     <div id="first">
+//         <h3 class="droll">Schilderswerk</h3>
+//         <span class="skill__droll">
+//                     <i class="fas fa-paint-roller"></i>
+//                 </span>
+//         <p class="drolletje">Stack Overflow is for professional and enthusiast programmers, people who write code because they love it.</p>
+
+//     </div>
+
+//     <hr class="drome"/>
+//     <div id="second">
+//     <h3 class="droll">Bouwkundig Onderhoud</h3>
+//     <span class="skill__droll">
+//     <i class="fas fa-hammer"></i>
+//                 </span>
+//         <p class="drolletje">When you post a new question, other users will almost immediately see it and try to provide good answers. This often happens in a matter of minutes, so be sure to check back frequently when your question is still new for the best response.</p>
+
+//     </div>
+// </div> -->
+
+
+    <!-- <div class="men_ex"><span class="test"><i class="fas fa-bars field-icon toggle-password"></i></span></div> -->
+
+
+
+<!-- <script>
+    
+$(".toggle-password").click(function() {
+$(this).toggleClass("fas fa-bars fas fa-times");
+});
+</script> -->
+
+
+
