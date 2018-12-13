@@ -1,51 +1,106 @@
-@import '../styles/index.scss';
+@import "../styles/index.scss";
 
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
 
 //header
 
 .header {
-    background-color: $white;
-    width: 100%;
-    &__image {
-        margin-left: auto;
-        margin-right: auto;
-        @include for-phablet {
-            width: 45%;
-        }
+  background-color: $white;
+  width: 100%;
+  &__image {
+    margin-left: auto;
+    margin-right: auto;
+    @include for-phablet {
+      width: 45%;
     }
+  }
 }
 
-	.nav {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: $orange3;
-	}
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $orange3;
+}
 
 .navigation {
-    display: flex;
-    &__list {
-       list-style-type: none;
-       padding: 22px;  
-    }
-    &__link {
-        display: block;
-        position: relative;
-        text-decoration: none;
-        font-size: 20px;
-        color: $black;
-        transition: 0.5s;
-    }
-    &__link:hover {
-        color: $white;
-        transform: scale(1.2);
-    }
-    
+  display: flex;
+  &__list {
+    list-style-type: none;
+    padding: 22px;
+  }
+  &__link {
+    display: block;
+    position: relative;
+    text-decoration: none;
+    font-size: 20px;
+    color: $black;
+    transition: 0.5s;
+  }
+  &__link:hover {
+    color: $white;
+    transform: scale(1.2);
+  }
+}
 
+a.activeMenuItem {
+  color: $white;
+}
+
+.toggle-nav {
+  display: none;
+}
+
+/*----- Responsive -----*/
+
+@include for-phone {
+  .nav ul.active {
+    display: none;
+  }
+
+  .nav {
+    position: relative;
+    display: inline-block;
+    z-index: 10;
+    width: 100%;
+  }
+
+  .navigation {
+    display: inline-block;
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.15);
+    border-radius: 3px;
+    background: #303030;
+  }
+
+  .nav li {
+    height: 100%;
+    padding: 0;
+    margin: 5px 0px 5px 0px;
+    float: none;
+    display: block;
+  }
+
+  .nav a {
+    text-align: center;
+    display: block;
+    text-decoration: none;
+  }
+
+  .span__icon {
+    cursor: pointer;
+    font-size: 30px;
+    color: $black;
+  }
+  .toggle-nav {
+    margin-right: 30px;
+    width: 0;
+  }
 }
 
 //header end
@@ -54,310 +109,77 @@
 
 //slider
 
-.slider { 
-    position: relative; 
-    width: 100%; 
-    height: 600px;
-    @include for-phone {
-        height: 200px;
-    }
-    @include for-tablet {
-        height: 400px;
-    }
-    &__slide{ 
-    position: absolute; 
-    top: 0; 
-    left: 0; 
-    right: 0; 
+.slider {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  @include for-phone {
+    height: 200px;
+  }
+  @include for-tablet {
+    height: 400px;
+  }
+  &__slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
     bottom: 0;
-    }
-    &__title {
+  }
+  &__title {
     color: $white;
     position: absolute;
     top: 50%;
     left: 50%;
     -webkit-transform: translateX(-50%);
-    transform: translateX(-50%)
-    }
-    &__een {
-    background: linear-gradient(
-        rgba(42, 42, 43, 0.50), 
-        rgba(42, 42, 43, 0.50)
-      ), url('../images/slider__one.jpg');
+    transform: translateX(-50%);
+  }
+  &__een {
+    background: linear-gradient(rgba(42, 42, 43, 0.5), rgba(42, 42, 43, 0.5)),
+      url("../images/slider__one.jpg");
     background-size: cover;
     background-position: center;
-    }
-    &__twee {
-    background: linear-gradient(
-        rgba(42, 42, 43, 0.50), 
-        rgba(42, 42, 43, 0.50)
-      ), url('../images/slider__two.jpg');
+  }
+  &__twee {
+    background: linear-gradient(rgba(42, 42, 43, 0.5), rgba(42, 42, 43, 0.5)),
+      url("../images/slider__two.jpg");
     background-size: cover;
     background-position: center;
-    }
-    &__drie {
-    background: linear-gradient(
-        rgba(42, 42, 43, 0.50), 
-        rgba(42, 42, 43, 0.50)
-      ), url('../images/slider__three.jpg');
+  }
+  &__drie {
+    background: linear-gradient(rgba(42, 42, 43, 0.5), rgba(42, 42, 43, 0.5)),
+      url("../images/slider__three.jpg");
     background-size: cover;
     background-position: center;
-    }
+  }
 }
 
 // slider end
-.drome {
-    margin: auto 0;
-    border: 0.5px solid $orange3;
-    height: 150px;
-}
-
-.backgroundcolor {
-    background-color: $light-gray2;
-}
-.skill {
-    margin: 0px auto;
-    display: flex;
-    max-width: 1000px;
-    padding: 110px 0;
-    &__title {
-        margin-left: 5px;
-        font-size: 30px;
-    }
-    &__flex {
-        display: flex;
-    }
-    &__icon {
-        font-size: 50px;
-        color: $orange3;
-    }
-    &__para {
-        width: 70%;
-        text-align: justify;
-        padding: 20px 0 20px 25px;
-    }
-    &__button {
-        color: $white;
-        height: 35px;
-        width: 15%;
-        border-radius: 5px;
-        font-size: 15px;
-        border: none;
-        background: $orange3;
-        outline: none;
-        margin-left: 95px;
-        cursor: pointer;
-        transition: 0.5s;
-    } 
-    &__button--onderhoud {
-        color: $white;
-        height: 35px;
-        width: 15%;
-        border-radius: 5px;
-        font-size: 15px;
-        border: none;
-        background: $orange3;
-        outline: none;
-        margin-left: 101px;
-    }
-    &__button--beglazing {
-        color: $white;
-        height: 35px;
-        width: 15%;
-        border-radius: 5px;
-        font-size: 15px;
-        border: none;
-        background: $orange3;
-        outline: none;
-        margin-left: 88px;
-    } 
-    &__button--advies {
-        color: $white;
-        height: 35px;
-        width: 15%;
-        border-radius: 5px;
-        font-size: 15px;
-        border: none;
-        background: $orange3;
-        outline: none;
-        margin-left: 94px;
-    }
-    &__button:hover {
-        background: $orange-hover;
-        transform: scale(1.1);
-    }  
-    &__link {
-        color: $white;
-    }
-}
-
 
 .section {
-    width: 100%;
-    &__image {
-        position: absolute;
-        background: linear-gradient(
-            rgba(42, 42, 43, 0.80), 
-            rgba(42, 42, 43, 0.80)
-          ), url('../images/section__image.jpg');
-        background-size: cover;
-        background-position: center;
-    } 
-    &__center {
-        padding: 55px 0;
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        z-index: 20;
-    }
-    &__title {
-        padding-bottom: 35px;
-        color: $white;
-    }
-    &__para {
-        padding-bottom: 35px;
-        color: $white;
-        width: 40%;
-    }
-}
-
-
-// .tyfus {
-//     display: none;
-// }
-
-
-.test {
-    color: $orange3;
-    font-size: 50px;
-}  
-
-#wrapper {
+  width: 100%;
+  &__image {
+    position: absolute;
+    background: linear-gradient(rgba(42, 42, 43, 0.8), rgba(42, 42, 43, 0.8)),
+      url("../images/section__image.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+  &__center {
+    padding: 55px 0;
+    position: relative;
     display: flex;
-    max-width: 1000px;
-    margin: 10px auto;
+    flex-direction: column;
+    align-items: center;
+    z-index: 20;
   }
-  #first {
-      padding-top: 50px;
-      height: 200px;
-      width: 500px;
+  &__title {
+    padding-bottom: 35px;
+    color: $white;
   }
-  #second {
-      padding-top: 50px;
-
-      height: 200px;
-      width: 500px;
+  &__para {
+    padding-bottom: 35px;
+    color: $white;
+    width: 40%;
   }
-  
-  .drolletje {
-      text-align: justify;
-      margin: 0 auto;
-      width: 250px;
-  }
-
-  .droll {
-      color: $orange3;
-      margin: 0 auto;
-      width: 250px;
-      font-size: 33px;
-  }
-
-//   .testtt {
-//       width: 450px;
-//   }
-
- .skill__droll {
-     padding: 30px 0;
-     margin: 0 auto;     
-     display: block;
-     width: 250px;
-     font-size: 50px;
-     color: $orange3; 
-    }
-
-    
-
-
-// /*----- Menu -----*/
-// 	.nav {
-//         display: flex;
-//         justify-content: center;
-//         align-items: center;
-//         background-color: $orange3;
-// 	}
-
-
-// .navigation {
-//     display: flex;
-//     &__list {
-//         float:left;
-//         list-style:none;
-//         font-size:17px;
-//         padding: 22px; 
-//     }
-//     &__link {
-//         color: $black;
-//         transition: 0.5s;
-//         text-decoration: none;
-//     }
-// }
- 
-
-// .nav a:hover, .nav .current-item a {
-// 	text-decoration:none;
-//     color: white;
- 
-// }
-
- /*----- Toggle Button -----*/
- .toggle-nav {
-	display:none;
 }
-
-/*----- Responsive -----*/
-
-@include for-phone {
-    .nav ul.active {
-		display:none;
-	}
-    
-	.nav {
-		position:relative;
-        display:inline-block;
-        z-index: 10;
-        width: 100%;
-	}
-
-    .navigation {
-        display: inline-block;
-        width:100%;
-		position:absolute;
-		top: 100%;
-		box-shadow:0px 1px 1px rgba(0,0,0,0.15);
-		border-radius:3px;
-		background:#303030;
-    }
-
-	.nav li {
-        padding: 0;
-		margin:5px 0px 5px 0px;
-		float:none;
-        display:block;
-	}
-
-	.nav a {
-        text-align: center;
-        display:block;
-        text-decoration: none;
-	}
-
-    .span__icon {
-        font-size: 30px;
-        color: $black;
-    }
-    .toggle-nav {
-        background-color: $orange3;
-    }
-}
-

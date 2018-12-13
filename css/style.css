@@ -34,6 +34,52 @@
     color: #ffffff;
     transform: scale(1.2); }
 
+a.activeMenuItem {
+  color: #ffffff; }
+
+.toggle-nav {
+  display: none; }
+
+/*----- Responsive -----*/
+@media (max-width: 640px) {
+  .nav ul.active {
+    display: none; }
+
+  .nav {
+    position: relative;
+    display: inline-block;
+    z-index: 10;
+    width: 100%; }
+
+  .navigation {
+    display: inline-block;
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.15);
+    border-radius: 3px;
+    background: #303030; }
+
+  .nav li {
+    height: 100%;
+    padding: 0;
+    margin: 5px 0px 5px 0px;
+    float: none;
+    display: block; }
+
+  .nav a {
+    text-align: center;
+    display: block;
+    text-decoration: none; }
+
+  .span__icon {
+    cursor: pointer;
+    font-size: 30px;
+    color: #000000; }
+
+  .toggle-nav {
+    margin-right: 30px;
+    width: 0; } }
 .slider {
   position: relative;
   width: 100%;
@@ -70,79 +116,6 @@
     background-size: cover;
     background-position: center; }
 
-.drome {
-  margin: auto 0;
-  border: 0.5px solid #db6c04;
-  height: 150px; }
-
-.backgroundcolor {
-  background-color: #e2e2e2; }
-
-.skill {
-  margin: 0px auto;
-  display: flex;
-  max-width: 1000px;
-  padding: 110px 0; }
-  .skill__title {
-    margin-left: 5px;
-    font-size: 30px; }
-  .skill__flex {
-    display: flex; }
-  .skill__icon {
-    font-size: 50px;
-    color: #db6c04; }
-  .skill__para {
-    width: 70%;
-    text-align: justify;
-    padding: 20px 0 20px 25px; }
-  .skill__button {
-    color: #ffffff;
-    height: 35px;
-    width: 15%;
-    border-radius: 5px;
-    font-size: 15px;
-    border: none;
-    background: #db6c04;
-    outline: none;
-    margin-left: 95px;
-    cursor: pointer;
-    transition: 0.5s; }
-  .skill__button--onderhoud {
-    color: #ffffff;
-    height: 35px;
-    width: 15%;
-    border-radius: 5px;
-    font-size: 15px;
-    border: none;
-    background: #db6c04;
-    outline: none;
-    margin-left: 101px; }
-  .skill__button--beglazing {
-    color: #ffffff;
-    height: 35px;
-    width: 15%;
-    border-radius: 5px;
-    font-size: 15px;
-    border: none;
-    background: #db6c04;
-    outline: none;
-    margin-left: 88px; }
-  .skill__button--advies {
-    color: #ffffff;
-    height: 35px;
-    width: 15%;
-    border-radius: 5px;
-    font-size: 15px;
-    border: none;
-    background: #db6c04;
-    outline: none;
-    margin-left: 94px; }
-  .skill__button:hover {
-    background: #ff7a00;
-    transform: scale(1.1); }
-  .skill__link {
-    color: #ffffff; }
-
 .section {
   width: 100%; }
   .section__image {
@@ -164,85 +137,5 @@
     padding-bottom: 35px;
     color: #ffffff;
     width: 40%; }
-
-.test {
-  color: #db6c04;
-  font-size: 50px; }
-
-#wrapper {
-  display: flex;
-  max-width: 1000px;
-  margin: 10px auto; }
-
-#first {
-  padding-top: 50px;
-  height: 200px;
-  width: 500px; }
-
-#second {
-  padding-top: 50px;
-  height: 200px;
-  width: 500px; }
-
-.drolletje {
-  text-align: justify;
-  margin: 0 auto;
-  width: 250px; }
-
-.droll {
-  color: #db6c04;
-  margin: 0 auto;
-  width: 250px;
-  font-size: 33px; }
-
-.skill__droll {
-  padding: 30px 0;
-  margin: 0 auto;
-  display: block;
-  width: 250px;
-  font-size: 50px;
-  color: #db6c04; }
-
-/*----- Toggle Button -----*/
-.toggle-nav {
-  display: none; }
-
-/*----- Responsive -----*/
-@media (max-width: 640px) {
-  .nav ul.active {
-    display: none; }
-
-  .nav {
-    position: relative;
-    display: inline-block;
-    z-index: 10;
-    width: 100%; }
-
-  .navigation {
-    display: inline-block;
-    width: 100%;
-    position: absolute;
-    top: 100%;
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.15);
-    border-radius: 3px;
-    background: #303030; }
-
-  .nav li {
-    padding: 0;
-    margin: 5px 0px 5px 0px;
-    float: none;
-    display: block; }
-
-  .nav a {
-    text-align: center;
-    display: block;
-    text-decoration: none; }
-
-  .span__icon {
-    font-size: 30px;
-    color: #000000; }
-
-  .toggle-nav {
-    background-color: #db6c04; } }
 
 /*# sourceMappingURL=style.css.map */

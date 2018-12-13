@@ -9,7 +9,7 @@
 	 crossorigin="anonymous">
 	<link rel="stylesheet" href="../css/style.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<title>Document</title>
+	<title>Home</title>
 </head>
 
 <body>
@@ -17,8 +17,8 @@
 		<center>
 			<a href="index"><img class="header__image" src="../images/denhollander.png" /></a>
 		</center>
-		<!-- <nav class="nav">
-			<ul class="navigation">
+		<nav class="nav">
+			<ul class="active navigation">
 				<li class="navigation__list"><a href="index" class="navigation__link">Home</a></li>
 				<li class="navigation__list"><a href="diensten" class="navigation__link">Diensten</a></li>
 				<li class="navigation__list"><a href="klanten" class="navigation__link">Klanten</a></li>
@@ -26,30 +26,27 @@
 				<li class="navigation__list"><a href="offerte" class="navigation__link">Offerte</a></li>
 				<li class="navigation__list"><a href="contact" class="navigation__link">Contact</a></li>
 			</ul>
-		</nav> -->
-		<nav class="nav">
-	<ul class="active navigation">
-		<li class="navigation__list"><a href="index" class="navigation__link">Home</a></li>
-		<li class="navigation__list"><a href="diensten" class="navigation__link">Diensten</a></li>
-		<li class="navigation__list"><a href="klanten" class="navigation__link">Klanten</a></li>
-		<li class="navigation__list"><a href="projecten" class="navigation__link">Projecten</a></li>
-		<li class="navigation__list"><a href="offerte" class="navigation__link">Offerte</a></li>
-		<li class="navigation__list"><a href="contact" class="navigation__link">Contact</a></li>
-	</ul>
-	<center>
-	<a class="toggle-nav" href="#"><span class="span__icon"><i class="fas fa-bars toggle-password"></i></span></a>
-</center>
-</nav>
+			<center>
+				<a class="toggle-nav"><span class="span__icon"><i class="fas fa-bars toggle-password"></i></span></a>
+			</center>
+		</nav>
 	</header>
 
-
 	<script>
-jQuery(document).ready(function() {
-    $(".toggle-password").click(function() {
-    $(this).toggleClass("fas fa-bars fas fa-times");
-})
-	jQuery('.toggle-nav').click(function() {
-		jQuery('.nav ul').toggleClass('active');;
-	});
-});
-</script>
+		jQuery(document).ready(function () {
+			$(".toggle-password").click(function () {
+				$(this).toggleClass("fas fa-bars fas fa-times");
+			})
+
+			jQuery('.toggle-nav').click(function () {
+				jQuery('.nav ul').toggleClass('active');;
+			});
+		});
+	</script>
+	<script>
+		$("a").each(function () {
+			if ((window.location.pathname.indexOf($(this).attr('href'))) > -1) {
+				$(this).addClass('activeMenuItem');
+			}
+		});
+	</script>
