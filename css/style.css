@@ -268,14 +268,20 @@ hr {
 
 .footer {
   background-color: #db6c04;
-  height: 200px;
   color: #000000; }
   .footer__center {
     padding: 50px 0;
-    margin: 0 auto;
-    max-width: 1000px; }
+    max-width: 1000px;
+    margin: 100px auto; }
   .footer__flex {
     display: flex;
-    justify-content: space-between; }
+    width: 100%; }
+  .footer__title {
+    text-align: left; }
+  .footer__test {
+    text-align: left; }
+  @media (max-width: 640px) {
+    .footer {
+      margin-top: 200px; } }
 
 /*# sourceMappingURL=style.css.map */

@@ -36,6 +36,7 @@
 		jQuery(document).ready(function () {
 			$(".toggle-password").click(function () {
 				$(this).toggleClass("fas fa-bars fas fa-times");
+				$(".slider, .information, .different, .section__image").toggle();
 			})
 
 			jQuery('.toggle-nav').click(function () {

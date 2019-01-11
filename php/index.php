@@ -83,24 +83,24 @@ include ('includes/header.php');
 		</div>
 	</div>
 	<div class="spacing">
-	<div class="all">
-		<div class="all__fourth">
-			<a class="all__ref" href="diensten">
-				<h2 class="all__title">Bouwkundig Onderhoud</h2>
-			</a>
-		</div>
-		<div class="all__fifth">
-			<a class="all__ref" href="diensten">
-				<h2 class="all__title--stuc">Beglazing</h2>
-			</a>
-		</div>
-		<div class="all__six">
-			<a class="all__ref" href="diensten">
-				<h2 class="all__title--behang">Kleuren Advies</h2>
-			</a>
-		</div>
+		<div class="all">
+			<div class="all__fourth">
+				<a class="all__ref" href="diensten">
+					<h2 class="all__title">Bouwkundig Onderhoud</h2>
+				</a>
+			</div>
+			<div class="all__fifth">
+				<a class="all__ref" href="diensten">
+					<h2 class="all__title--stuc">Beglazing</h2>
+				</a>
+			</div>
+			<div class="all__six">
+				<a class="all__ref" href="diensten">
+					<h2 class="all__title--behang">Kleuren Advies</h2>
+				</a>
+			</div>
 
-	</div>
+		</div>
 </section>
 
 <!-- <section class="section">
@@ -115,17 +115,19 @@ include ('includes/header.php');
         </div>
 </section> -->
 <div class="section__image">
-<section class="section">
+	<section class="section">
 		<h2 class="section__title">Hoe kunnen we u helpen?</h2>
 		<p class="section__tekst">Gestart als een traditioneel schildersbedrijf en inmiddels getransformeerd tot
-                    een bedrijf dat het “Integraal Vastgoedonderhoud” hanteert als kernactiviteit. De specialisten van
-                    DenHollander leveren maatwerk als het gaat om totaal gevelonderhoud voor onder andere de
-                    institutionele beleggers, vastgoedbeheerders, zorginstellingen, overheid, woningcorporaties,
-					onderwijsinstellingen en VvE’s</p>
+			een bedrijf dat het “Integraal Vastgoedonderhoud” hanteert als kernactiviteit. De specialisten van
+			DenHollander leveren maatwerk als het gaat om totaal gevelonderhoud voor onder andere de
+			institutionele beleggers, vastgoedbeheerders, zorginstellingen, overheid, woningcorporaties,
+			onderwijsinstellingen en VvE’s</p>
 		<a href="contact"><button class="section__button">Neem Contact op</button></a>
-</section> 
+	</section>
 </div>
-
 <?php 
-include ('includes/footer.html');
+phpinfo();
+?>
+<?php 
+include ('includes/footer.php');
 ?>
