@@ -19,7 +19,7 @@
 		</center>
 		<nav class="nav">
 			<ul class="active navigation">
-				<li class="navigation__list"><a href="index" class="navigation__link">Home</a></li>
+// 				<li class="navigation__list"><a href="index" class="navigation__link">Home</a></li>
 				<li class="navigation__list"><a href="diensten" class="navigation__link">Diensten</a></li>
 				<li class="navigation__list"><a href="klanten" class="navigation__link">Klanten</a></li>
 				<li class="navigation__list"><a href="projecten" class="navigation__link">Projecten</a></li>
